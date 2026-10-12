@@ -1,4 +1,3 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f4e09bd0-0ebf-4037-860e-0fd039cb02fc" /># 🎓 IEM Events | CSE (AIML)
 
 ### Department Event Management Website — Institute of Engineering & Management, Kolkata
 
