@@ -24,7 +24,7 @@ Explore the live website to see upcoming events, event registration, the gallery
 
 ---
 
-## ✨ Features
+
 
 ## ✨ Features
 
