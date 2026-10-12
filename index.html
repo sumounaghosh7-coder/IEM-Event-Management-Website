@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEM Events | CSE (AIML)</title>
+    <meta name="description" content="Event Management Website for Department of CSE (AIML), Institute of Engineering & Management, Kolkata.">
+    <meta name="theme-color" content="#0b0f2e">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+    <div class="container header-inner">
+
+        <a href="#home" class="brand">
+            <img src="images/iem-logo.png" alt="IEM Logo" class="iem-logo">
+            <div class="brand-info">
+                <strong>Institute of Engineering &amp; Management</strong>
+                <span>Department of CSE (AIML) · Kolkata</span>
+            </div>
+        </a>
+
+        <nav class="navigation" id="navigation">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#events" class="nav-link">Events</a>
+            <a href="#register" class="nav-link">Register</a>
+            <a href="#gallery" class="nav-link">Gallery</a>
+            <a href="#about" class="nav-link">About Us</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+            <button type="button" class="theme-button" id="themeButton" aria-label="Toggle dark mode">☾</button>
+            <button type="button" class="menu-button" id="menuButton" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+    </div>
+</header>
+
+<main>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+
+    <div class="hero-decoration decoration-one"></div>
+    <div class="hero-decoration decoration-two"></div>
+    <div class="hero-decoration decoration-three"></div>
+
+    <div class="container hero-grid">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">ODD SEMESTER 2026–27</p>
+
+            <h1>
+                Events at the
+                <span>Department of CSE (AIML)</span>
+            </h1>
+
+            <p class="hero-description">
+                Hackathons, workshops, guest lectures and technical events —
+                discover what's coming up, register, and relive memorable
+                moments from the Department of CSE (AIML).
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#events" class="primary-button">Explore Events</a>
+                <a href="#register" class="secondary-button">Register Now</a>
+            </div>
+
+            <div class="hero-stats">
+                <div><strong id="statEvents">6</strong><span>Events</span></div>
+                <div><strong>4</strong><span>Categories</span></div>
+                <div><strong>Oct–Dec</strong><span>Semester</span></div>
+            </div>
+
+        </div>
+
+        <!-- COUNTDOWN -->
+        <div class="countdown-card">
+
+            <div class="countdown-heading">
+                <span>NEXT EVENT</span>
+                <span class="status-badge" id="statusBadge">UPCOMING</span>
+            </div>
+
+            <h2 id="nextEventTitle">HackIEM 2026</h2>
+
+            <p class="next-event-details" id="nextEventDetails">
+                Saturday, 12 December 2026 · 09:00 AM · AIML Lab, Gurukul Campus
+            </p>
+
+            <div class="countdown-grid">
+                <div class="count-box"><strong id="days">00</strong><small>Days</small></div>
+                <div class="count-box"><strong id="hours">00</strong><small>Hours</small></div>
+                <div class="count-box"><strong id="minutes">00</strong><small>Minutes</small></div>
+                <div class="count-box"><strong id="seconds">00</strong><small>Seconds</small></div>
+            </div>
+
+            <div class="clock-line">
+                Kolkata time: <strong id="kolkataClock">00:00:00</strong>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= EVENTS ================= -->
+<section class="section" id="events">
+    <div class="container">
+
+        <div class="section-heading">
+            <p class="eyebrow">WHAT'S COMING UP</p>
+            <h2>Upcoming events</h2>
+            <p>Explore technical, cultural, workshop and lecture events scheduled for this semester.</p>
+        </div>
+
+        <div class="filter-buttons">
+            <button class="filter-button active" data-filter="all">All</button>
+            <button class="filter-button" data-filter="technical">Technical</button>
+            <button class="filter-button" data-filter="workshop">Workshop</button>
+            <button class="filter-button" data-filter="cultural">Cultural</button>
+            <button class="filter-button" data-filter="lecture">Lecture</button>
+        </div>
+
+        <div class="event-list" id="eventList"></div>
+
+        <p class="empty-message" id="emptyMessage">No events available in this category.</p>
+
+    </div>
+</section>
+
+
+<!-- ================= REGISTER ================= -->
+<section class="section soft-section" id="register">
+    <div class="container two-column">
+
+        <div class="register-info">
+            <p class="eyebrow">JOIN THE EXPERIENCE</p>
+            <h2>Register for an event</h2>
+            <p>
+                Open to students of IEM. Register for upcoming technical,
+                cultural and academic events through the simple registration form.
+            </p>
+
+            <ul class="info-list">
+                <li>Use your official IEM roll number.</li>
+                <li>Use an active college email address.</li>
+                <li>Team events require individual registration.</li>
+                <li>Registration closes before the event.</li>
+            </ul>
+        </div>
+
+        <form class="form-card" id="registrationForm">
+
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="studentName">Student Name</label>
+                    <input type="text" id="studentName" placeholder="e.g. Sumouna Ghosh" required>
+                </div>
+                <div class="input-group">
+                    <label for="rollNumber">Roll Number</label>
+                    <input type="text" id="rollNumber" placeholder="10-digit roll number" maxlength="10" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="department">Department</label>
+                <select id="department" required>
+                    <option value="">Select department</option>
+                    <option>CSE (AIML)</option>
+                    <option>CSE</option>
+                    <option>IT</option>
+                    <option>ECE</option>
+                    <option>EE</option>
+                    <option>CSBS</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="you@iem.edu.in" required>
+                </div>
+                <div class="input-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="10-digit mobile" maxlength="10" required>
+                </div>
+            </div>
+
+            <fieldset class="gender-field">
+                <legend>Gender</legend>
+                <div class="gender-options">
+                    <label><input type="radio" name="gender" value="Female" required> Female</label>
+                    <label><input type="radio" name="gender" value="Male"> Male</label>
+                    <label><input type="radio" name="gender" value="Other"> Other</label>
+                    <label><input type="radio" name="gender" value="Prefer not to say"> Prefer not to say</label>
+                </div>
+            </fieldset>
+
+            <div class="input-group">
+                <label for="eventSelect">Select Event</label>
+                <select id="eventSelect" required>
+                    <option value="">Select an event</option>
+                </select>
+            </div>
+
+            <button type="submit" class="submit-button">Submit Registration</button>
+            <p class="form-message" id="registrationMessage"></p>
+
+        </form>
+
+    </div>
+</section>
+
+
+<!-- ================= GALLERY ================= -->
+<section class="section" id="gallery">
+    <div class="container">
+
+        <div class="section-heading">
+            <p class="eyebrow">EVENT HIGHLIGHTS</p>
+            <h2>Moments from our events</h2>
+            <p>A glimpse of the technical, creative and collaborative experiences at IEM.</p>
+        </div>
+
+        <div class="gallery-grid">
+
+            <figure class="gallery-card">
+                <img src="images/hackathon-2026.png" alt="Hackathon 2026">
+                <figcaption><strong>HackIEM 2026</strong><span>Ideas · Code · Impact</span></figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+                <img src="images/techfest-2026.png" alt="Tech Fest 2026">
+                <figcaption><strong>Tech Fest 2026</strong><span>Ideas · Innovation · Impact</span></figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+                <img src="images/workshop-2026.png" alt="Workshop 2026">
+                <figcaption><strong>Workshop 2026</strong><span>Learn · Practice · Grow</span></figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+                <img src="images/cultural-night-2026.png" alt="Cultural Night 2026">
+                <figcaption><strong>Cultural Night 2026</strong><span>Different Talents · One Stage</span></figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+                <img src="images/robotics-2026.png" alt="Robotics 2026">
+                <figcaption><strong>Robotics 2026</strong><span>Build · Innovate · Automate</span></figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+                <img src="images/guest-lecture-2026.png" alt="Guest Lecture 2026">
+                <figcaption><strong>Guest Lecture 2026</strong><span>Learn · Explore · Grow</span></figcaption>
+            </figure>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+<section class="section soft-section" id="about">
+    <div class="container about-grid">
+
+        <div class="about-text">
+            <p class="eyebrow">ABOUT THE DEPARTMENT</p>
+            <h2>Shaping technology. Building tomorrow.</h2>
+
+            <p>
+                The Department of Computer Science &amp; Engineering (Artificial
+                Intelligence and Machine Learning) at the Institute of Engineering
+                &amp; Management, Kolkata, focuses on developing strong foundations
+                in computer science, artificial intelligence and emerging technologies.
+            </p>
+            <p>
+                The B.Tech programme in CSE (AIML) combines core computer science
+                with machine learning, deep learning, data science, natural language
+                processing and intelligent systems.
+            </p>
+            <p>
+                Through hands-on laboratories, technical workshops, hackathons,
+                expert lectures and project-based learning, students are encouraged
+                to transform classroom knowledge into practical solutions.
+            </p>
+            <p>
+                The department promotes innovation, research, entrepreneurship and
+                collaborative learning while providing opportunities to interact with
+                industry professionals, academics and fellow innovators.
+            </p>
+        </div>
+
+        <div class="highlights-card">
+            <h3>Department Highlights</h3>
+
+            <div class="highlight-item"><span>01</span>
+                <div><small>ACADEMIC FOCUS</small><strong>AI · ML · Data Science · Deep Learning</strong></div>
+            </div>
+            <div class="highlight-item"><span>02</span>
+                <div><small>LEARNING APPROACH</small><strong>Hands-on &amp; Project-Based Learning</strong></div>
+            </div>
+            <div class="highlight-item"><span>03</span>
+                <div><small>TECHNICAL ACTIVITIES</small><strong>Hackathons · Workshops · Tech Challenges</strong></div>
+            </div>
+            <div class="highlight-item"><span>04</span>
+                <div><small>INDUSTRY EXPOSURE</small><strong>Expert Talks · Guest Lectures · Networking</strong></div>
+            </div>
+            <div class="highlight-item"><span>05</span>
+                <div><small>INNOVATION</small><strong>Research · Projects · Entrepreneurship</strong></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= COORDINATORS ================= -->
+<section class="section" id="coordinators">
+    <div class="container">
+
+        <div class="section-heading">
+            <p class="eyebrow">EVENT TEAM</p>
+            <h2>Event coordinators</h2>
+            <p>Meet the faculty and student team behind the department events.</p>
+        </div>
+
+        <div class="coordinator-grid">
+
+            <div class="coordinator-card">
+                <span>FACULTY COORDINATOR</span>
+                <h3>Dr. Sudipta Bhattacharya</h3>
+                <p>Associate Professor, CSE (AIML)</p>
+            </div>
+
+            <div class="coordinator-card">
+                <span>STUDENT COORDINATOR</span>
+                <h3>Ritwika Das</h3>
+                <p>3rd Year, CSE (AIML)</p>
+            </div>
+
+            <div class="coordinator-card">
+                <span>TECHNICAL LEAD</span>
+                <h3>Arnab Mukherjee</h3>
+                <p>4th Year, CSE (AIML)</p>
+            </div>
+
+            <div class="coordinator-card">
+                <span>CULTURAL LEAD</span>
+                <h3>Sneha Roy</h3>
+                <p>2nd Year, CSE (AIML)</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+<section class="section soft-section" id="contact">
+    <div class="container contact-grid">
+
+        <div>
+            <p class="eyebrow">GET IN TOUCH</p>
+            <h2>Contact</h2>
+            <p>
+                Have questions about an event, registration, sponsorship or
+                participation? Get in touch with the event team.
+            </p>
+
+            <div class="contact-details">
+                <div>
+                    <strong>Address</strong>
+                    <p>Department of CSE (AIML), Institute of Engineering &amp; Management, Gurukul Campus, Kolkata, West Bengal, India</p>
+                </div>
+                <div>
+                    <strong>Email</strong>
+                    <p>events.aiml@iem.edu.in</p>
+                </div>
+                <div>
+                    <strong>Office Hours</strong>
+                    <p>Monday – Friday · 10:00 AM – 5:00 PM</p>
+                </div>
+            </div>
+        </div>
+
+        <form class="form-card" id="feedbackForm">
+            <h3>Send feedback</h3>
+
+            <div class="input-group">
+                <label for="feedbackName">Your Name</label>
+                <input type="text" id="feedbackName" required>
+            </div>
+            <div class="input-group">
+                <label for="feedbackEmail">Email</label>
+                <input type="email" id="feedbackEmail" required>
+            </div>
+            <div class="input-group">
+                <label for="feedbackText">Message</label>
+                <textarea id="feedbackText" rows="5" placeholder="Write your feedback..." required></textarea>
+            </div>
+
+            <button type="submit" class="submit-button">Send Feedback</button>
+            <p class="form-message" id="feedbackMessage"></p>
+        </form>
+
+    </div>
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <div class="container footer-inner">
+        <div>
+            <strong>Institute of Engineering &amp; Management</strong>
+            <p>Department of CSE (AIML) · Kolkata</p>
+        </div>
+        <p>© 2026 Department of CSE (AIML)</p>
+        <a href="#home">Back to top ↑</a>
+    </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
