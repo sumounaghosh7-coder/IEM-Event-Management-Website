@@ -1,3 +1,12 @@
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f4e09bd0-0ebf-4037-860e-0fd039cb02fc" /># 🎓 IEM Events | CSE (AIML)
+
+### Department Event Management Website — Institute of Engineering & Management, Kolkata
+
+A modern, responsive and interactive event management website designed for the Department of Computer Science & Engineering (Artificial Intelligence and Machine Learning) at the Institute of Engineering & Management (IEM), Kolkata.
+
+The website provides a centralized platform for exploring upcoming events, registering for activities, viewing event galleries, learning about the department and contacting the event team.
+
+---
 # 🎓 IEM Events | CSE (AIML)
 
 ### Department Event Management Website — Institute of Engineering & Management, Kolkata
@@ -7,6 +16,16 @@ A modern, responsive and interactive event management website designed for the D
 The website provides a centralized platform for exploring upcoming events, registering for activities, viewing event galleries, learning about the department and contacting the event team.
 
 ---
+
+## 🌐 Live Demo
+
+🚀 **[Visit IEM Events — CSE (AIML)](https://gregarious-fenglisu-5e088a.netlify.app)**
+
+Explore the live website to see upcoming events, event registration, the gallery, department information and more.
+
+---
+
+## ✨ Features
 
 ## ✨ Features
 
